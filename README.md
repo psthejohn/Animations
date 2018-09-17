@@ -1,3 +1,3 @@
 # Animations
 
-    Background Linear Infinite Rotation Animation using css.
+   Anim1 --> Background Linear Infinite Rotation Animation using css.
