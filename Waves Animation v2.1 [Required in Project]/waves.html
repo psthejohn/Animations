@@ -15,7 +15,10 @@
     <script>
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera(130, window.innerWidth / window.innerHeight, 0.1, 10000);
-        var renderer = new THREE.WebGLRenderer();
+        var renderer = new THREE.WebGLRenderer( { alpha: true } ); // Set alpha true for setting up transparent background
+        // renderer.setClearColor(0x000000, 0); // the default
+
+
         renderer.setSize(window.innerWidth - 2, window.innerHeight - 3.6);
         document.body.appendChild(renderer.domElement);
         var geometry = new THREE.SphereBufferGeometry(50, 100, 170);
@@ -24,7 +27,7 @@
         line.material.depthTest = false;
         line.material.opacity = 0.22;
         line.material.transparent = true;
-        line.material.linewidth = 1.5;
+        line.material.linewidth = 1.5; // Thickness of Rotating Spherical Globe
         line.material.color = new THREE.Color("#99abc4");;
         scene.add(line);
         camera.position.y = 54;
@@ -40,4 +43,5 @@
         operate();     
     </script>
 </body>
+
 </HTML>
