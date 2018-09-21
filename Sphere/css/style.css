@@ -1,0 +1,162 @@
+body {
+  /* background: #b32567; */
+  background: url("../assets/background.jpg") repeat-x !important;
+  background-size: cover !important;
+}
+.circle {
+  /* display: block; */
+  position: relative;
+  left: 37%;
+  top: 10%;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 0;
+  background: #456c6f; /*For Browsers those don't support Gradients*/
+  /* background: radial-gradient(circle at 170px 120px, #abacb1 .1%, #1e1c1f 100%); */
+  background: radial-gradient(circle at 170px 120px, #4d4e52 10%, #050505 );
+
+  /* background: radial-gradient(circle at 170px 120px, #4d4e52, #799688); */
+}
+
+.stage {
+  position: absolute;
+  left: 33%;
+  top: 8%;
+  width: 300px;
+  height: 300px;
+  /* display: inline-block; */
+  margin: 20px;
+  perspective: 1100px;
+  perspective-origin: 50% 50%;
+  color:#196cc4;
+}
+.ball .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  transform: rotateX(90deg) translateZ(-150px);
+  z-index: -1;
+}
+ 
+
+.ball {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-left: 32.4px;
+  margin-top:-0%;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  background: url('../assets/map.png') repeat-x;
+  background-size: auto 100%;
+  /* filter: invert(100%); */
+  -webkit-animation: move-map 30s infinite linear;
+  -moz-animation: move-map 30s infinite linear;
+  -o-animation: move-map 30s infinite linear;
+  -ms-animation: move-map 30s infinite linear;
+  animation: move-map 60s infinite linear;
+}
+
+.ball:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* box-shadow: -40px 10px 70px 10px rgba(0,0,0,0.5) inset; */
+  /* z-index: 2; */
+}
+
+.ball:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(100%);
+  opacity: 0.3;
+  background: radial-gradient(circle at 60% 40%, #194088, #0f244b 10%, #000000 66%);
+}
+
+
+@-moz-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@-webkit-keyframes move-map {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -849px 0; }
+}
+
+
+@-o-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@-ms-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } } 
+
+/* TEXT ANIMATION AT THE BOTTOM */
+
+.cc {
+  position: relative;
+  /* color: #0ff6f9; */
+  color: #39b57f;
+  font-family: "Orbitron", sans-serif;
+  padding: 20% 5% 0% 25%;
+  font-weight: 100;
+  font-size: 30px;
+  letter-spacing: 5px;
+  -webkit-animation: glow 2s infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  to {
+    padding: 15% 5% 0% 16%;
+    letter-spacing: 15px;
+    font-weight: 800;
+    text-shadow: 0 0 90px rgb(0, 255, 166);
+    /* -ms-transform: skewZ(20deg); 
+    -webkit-transform: skewZ(20deg);
+    transform: skewZ(20deg); */
+  }
+}
+
+
+
+
+
+
+
+
