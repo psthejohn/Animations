@@ -15,29 +15,31 @@
     <script>
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera(130, window.innerWidth / window.innerHeight, 0.1, 10000);
+
         var renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth - 2, window.innerHeight - 3.6);
         document.body.appendChild(renderer.domElement);
-        var geometry = new THREE.SphereBufferGeometry(50, 100, 170);
+        var geometry = new THREE.SphereBufferGeometry(14, 50, 40);
         var wireframe = new THREE.WireframeGeometry(geometry);
         var line = new THREE.LineSegments(wireframe);
         line.material.depthTest = false;
         line.material.opacity = 0.22;
         line.material.transparent = true;
-        line.material.linewidth = 1.5;
         line.material.color = new THREE.Color("#99abc4");;
         scene.add(line);
-        camera.position.y = 54;
+        camera.position.y = 14;
         camera.position.z = 0;
         camera.position.x = 0;
         var operate = function () {
             requestAnimationFrame(operate);
-            line.rotation.x += 0.0005;
+	    line.rotation.x += 0.0005;
             line.rotation.y -= 0.0005;
             line.rotation.z += 0.001;
-            renderer.render(scene, camera);
+	    renderer.render(scene, camera);
         };
-        operate();     
+        operate();
+        
     </script>
 </body>
+
 </HTML>
