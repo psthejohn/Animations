@@ -1,5 +1,7 @@
-# New Document
 
+
+## Screenshot
+![Screenshot](https://i.imgur.com/2HGbjJ4.png)
 
 > ### Try changing color of LOADING text by uncommenting 64,68 and 78 th LINE  and comment all colors in css file after those three changes i.e. for  #text span{}     #text span:nth-child(2){}    .... and so on, under styleV2.css file.
 
