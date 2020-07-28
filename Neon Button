@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PRACTICE</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            background: #031321;
+            /* font-family: ; */
+        }
+
+        a {
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            padding: 15px 30px;
+            color: #2196F3;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 24px;
+            overflow: hidden;
+            transition: 1s ease;
+            /* transition-delay: 1s; */
+
+        }
+
+        a span {
+            position: absolute;
+            display: block;
+        }
+
+        a:hover {
+            border: 2px solid #2196F3;
+            -webkit-box-shadow: 0px 0px 39px 5px #04e2ffcc;
+            -moz-box-shadow: 0px 0px 39px 5px #04e2ffcc;
+            box-shadow: 0px 0px 39px 5px #04e2ffcc;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        NEON BUTTON
+    </a>
+</body>
+
+</html>
