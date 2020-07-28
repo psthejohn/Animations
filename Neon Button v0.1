@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PRACTICE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            background: #031321;
+            font-family: 'Play', sans-serif;
+        }
+
+        div {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            animation: anim 2s ease;
+            -webkit-animation: anim 2s infinite;
+            float: right;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 30px;
+            color: #2196F3;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 24px;
+            overflow: hidden;
+            transition: 4s ease;
+        }
+
+        a:hover {
+            /* border: 2px solid #2196F3; */
+            -webkit-box-shadow: 0px 0px 39px 5px #04e2ffcc;
+            -moz-box-shadow: 0px 0px 39px 5px #04e2ffcc;
+            box-shadow: 0px 0px 39px 5px #04e2ffcc;
+        }
+
+        a span:nth-child(1) {
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0%;
+            margin: 0 auto;
+            height: 2px;
+            background-color: #000;
+            width: 0%;
+        }
+
+        a:hover span:nth-child(1) {
+            border-top: 3px solid #2196F3;
+            width: 100%;
+            transition: 1s ease;
+        }
+
+        a span:nth-child(2) {
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 0%;
+            margin: 0 auto;
+            height: 0%;
+            background-color: #000;
+            width: 0%;
+        }
+
+        a:hover span:nth-child(2) {
+            border-right: 3px solid #2196F3;
+            height: 100%;
+            transition: 0.5s ease;
+            transition-delay: 0.7s;
+        }
+
+        a span:nth-child(3) {
+            position: absolute;
+            display: block;
+            right: 0;
+            bottom: 0%;
+            margin: 0 auto;
+            height: 0%;
+            background-color: #000;
+            width: 0%;
+        }
+
+        a:hover span:nth-child(3) {
+            border-bottom: 3px solid #2196F3;
+            width: 100%;
+            transition: 1s ease;
+            transition-delay: 1s;
+        }
+
+        a span:nth-child(4) {
+            position: absolute;
+            display: block;
+            left: 0;
+            bottom: 0%;
+            margin: 0 auto;
+            height: 0%;
+            background-color: #000;
+            width: 0%;
+        }
+
+        a:hover span:nth-child(4) {
+            border-left: 3px solid #2196F3;
+            height: 100%;
+            transition: 0.5s;
+            transition-delay: 1.8s;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            NEON BUTTON
+        </a>
+    </div>
+</body>
+
+</html>
